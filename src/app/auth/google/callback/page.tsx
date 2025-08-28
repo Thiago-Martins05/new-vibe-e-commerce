@@ -12,6 +12,8 @@ function GoogleCallbackContent() {
   console.log("🔄 Callback Google - Code:", code);
   console.log("🔄 Callback Google - Error:", error);
   console.log("🔄 Callback Google - Window opener:", !!window.opener);
+  console.log("🔄 Callback Google - URL atual:", window.location.href);
+  console.log("🔄 Callback Google - Search params:", window.location.search);
 
   if (error) {
     console.log("❌ Erro no callback:", error);
