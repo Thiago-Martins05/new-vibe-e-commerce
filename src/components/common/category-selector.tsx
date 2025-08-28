@@ -20,7 +20,7 @@ const CategorySelector = ({ categories }: CategorySelectorProps) => {
           >
             <Button
               variant="ghost"
-              className="w-full truncate rounded-3xl bg-[#4c4b4b] p-5 text-sm font-semibold text-white duration-200 hover:scale-105 hover:cursor-pointer"
+              className="w-full truncate rounded-3xl bg-[#4c4b4b] p-5 text-sm font-semibold text-white transition-all duration-200 hover:scale-105 hover:shadow-lg cursor-pointer"
             >
               {category.name}
             </Button>
