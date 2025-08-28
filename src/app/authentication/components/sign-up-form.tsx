@@ -25,7 +25,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
-
 const formSchema = z
   .object({
     name: z.string("Nome inválido").trim().min(3, "Nome inválido!"),

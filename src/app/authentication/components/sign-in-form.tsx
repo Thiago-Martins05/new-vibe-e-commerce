@@ -25,7 +25,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
-
 const formSchema = z.object({
   email: z.email("E-mail inválido!"),
   password: z.string("Senha inválida!").min(8, "Senha inválida!"),
