@@ -161,7 +161,7 @@ const SignUpForm = () => {
             </CardContent>
 
             <CardFooter>
-              <Button type="submit" className="w-full transition-all duration-200 hover:scale-125 cursor-pointer">
+              <Button type="submit" className="w-full transition-all duration-300 ease-in-out hover:scale-125 cursor-pointer">
                 Criar Conta
               </Button>
             </CardFooter>

@@ -69,7 +69,7 @@ const ProductActions = ({ productVariantId }: ProductActionsProps) => {
               size="icon"
               onClick={handleDecrement}
               disabled={quantity <= 1}
-              className="transition-all duration-200 hover:scale-125 cursor-pointer"
+              className="transition-all duration-300 ease-in-out hover:scale-125 cursor-pointer"
             >
               <MinusIcon className="h-4 w-4" />
             </Button>
@@ -78,7 +78,7 @@ const ProductActions = ({ productVariantId }: ProductActionsProps) => {
               variant="outline" 
               size="icon" 
               onClick={handleIncrement}
-              className="transition-all duration-200 hover:scale-125 cursor-pointer"
+              className="transition-all duration-300 ease-in-out hover:scale-125 cursor-pointer"
             >
               <PlusIcon className="h-4 w-4" />
             </Button>
@@ -93,7 +93,7 @@ const ProductActions = ({ productVariantId }: ProductActionsProps) => {
           title="Adicionar ao Carrinho"
         />
         <Button
-          className="rounded-full transition-all duration-200 hover:scale-125 cursor-pointer"
+          className="rounded-full transition-all duration-300 ease-in-out hover:scale-125 cursor-pointer"
           onClick={handleBuyNow}
           disabled={addCartItemMutation.isPending}
         >

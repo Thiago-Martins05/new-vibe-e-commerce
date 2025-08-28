@@ -53,7 +53,7 @@ const HeaderContent = () => {
 
   return (
     <header className="flex items-center justify-between px-5 py-1 md:m-auto md:max-w-[80%]">
-              <Link href="/" className="transition-all duration-200 hover:scale-125 cursor-pointer">
+              <Link href="/" className="transition-all duration-300 ease-in-out hover:scale-125 cursor-pointer">
         <Image src="/logo.svg" alt="NEWVIBE" width={100} height={26}></Image>
       </Link>
 
@@ -66,7 +66,7 @@ const HeaderContent = () => {
         <Cart />
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant="outline" size="icon" className="transition-all duration-200 hover:scale-125 cursor-pointer">
+            <Button variant="outline" size="icon" className="transition-all duration-300 ease-in-out hover:scale-125 cursor-pointer">
               <MenuIcon />
             </Button>
           </SheetTrigger>
