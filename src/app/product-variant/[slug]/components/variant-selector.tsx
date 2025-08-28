@@ -18,7 +18,9 @@ const VariantSelector = ({ variants }: VariantSelectorProps) => {
           href={`/product-variant/${variant.slug}`}
           key={variant.id}
           className={
-            slug === variant.slug ? "border-primary rounded-xl border-2" : ""
+            slug === variant.slug 
+              ? "border-primary rounded-xl border-2 transition-all duration-200 hover:scale-105 cursor-pointer" 
+              : "transition-all duration-200 hover:scale-105 cursor-pointer"
           }
         >
           <Image

@@ -69,11 +69,17 @@ const ProductActions = ({ productVariantId }: ProductActionsProps) => {
               size="icon"
               onClick={handleDecrement}
               disabled={quantity <= 1}
+              className="transition-all duration-200 hover:scale-105 cursor-pointer"
             >
               <MinusIcon className="h-4 w-4" />
             </Button>
             <span className="w-8 text-center">{quantity}</span>
-            <Button variant="outline" size="icon" onClick={handleIncrement}>
+            <Button 
+              variant="outline" 
+              size="icon" 
+              onClick={handleIncrement}
+              className="transition-all duration-200 hover:scale-105 cursor-pointer"
+            >
               <PlusIcon className="h-4 w-4" />
             </Button>
           </div>
@@ -87,7 +93,7 @@ const ProductActions = ({ productVariantId }: ProductActionsProps) => {
           title="Adicionar ao Carrinho"
         />
         <Button
-          className="rounded-full"
+          className="rounded-full transition-all duration-200 hover:scale-105 cursor-pointer"
           onClick={handleBuyNow}
           disabled={addCartItemMutation.isPending}
         >

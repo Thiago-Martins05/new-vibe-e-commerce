@@ -92,7 +92,7 @@ const CartItem = ({
           </p>
           <div className="flex w-[80px] items-center justify-between rounded-lg border p-1">
             <Button
-              className="h-4 w-4"
+              className="h-4 w-4 transition-all duration-200 hover:scale-110 cursor-pointer"
               variant="ghost"
               onClick={handleDecreaseQuantityClick}
               disabled={
@@ -104,7 +104,7 @@ const CartItem = ({
             </Button>
             <p className="text-xs font-semibold">{quantity}</p>
             <Button
-              className="h-4 w-4"
+              className="h-4 w-4 transition-all duration-200 hover:scale-110 cursor-pointer"
               variant="ghost"
               onClick={handleIncreaseQuantityClick}
               disabled={
@@ -124,7 +124,7 @@ const CartItem = ({
         <Button
           variant="outline"
           size="icon"
-          className="h-7 w-7"
+          className="h-7 w-7 transition-all duration-200 hover:scale-105 cursor-pointer"
           onClick={handleDeleteClick}
           disabled={
             removeCartItemMutation.isPending || updateQuantityMutation.isPending

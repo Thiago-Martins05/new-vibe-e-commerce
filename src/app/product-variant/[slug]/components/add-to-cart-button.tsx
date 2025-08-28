@@ -51,7 +51,7 @@ const AddToCartButton = ({
 
   return (
     <Button
-      className="cursor-pointer rounded-full"
+      className="cursor-pointer rounded-full transition-all duration-200 hover:scale-105"
       onClick={handleAddToCart}
       disabled={addCartItemMutation.isPending}
     >
