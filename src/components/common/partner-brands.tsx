@@ -26,7 +26,7 @@ const PartnerBrands = ({ title }: { title: string }) => {
                 alt={logo.alt}
                 width={100}
                 height={150}
-                className="md:h-auto md:w-[100px] transition-all duration-200 hover:scale-110 cursor-pointer"
+                className="md:h-auto md:w-[100px]"
               />
             ))}
           </div>

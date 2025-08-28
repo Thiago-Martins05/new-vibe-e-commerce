@@ -212,7 +212,7 @@ const OrdersClient = () => {
                   Você precisa estar logado para ver seus pedidos.
                 </p>
                 <Button
-                  className="w-full rounded-full transition-all duration-200 hover:scale-105 cursor-pointer"
+                  className="w-full rounded-full hover-zoom-button cursor-pointer"
                   size="lg"
                   onClick={() => router.push("/authentication/sign-in")}
                 >
@@ -301,7 +301,7 @@ const OrdersClient = () => {
                 </p>
                 <div className="space-y-3">
                   <Button
-                    className="w-full rounded-full transition-all duration-200 hover:scale-105 cursor-pointer"
+                    className="w-full rounded-full hover-zoom-button cursor-pointer"
                     size="lg"
                     onClick={handleCreateTestOrders}
                     disabled={isCreatingTestOrders}
@@ -312,7 +312,7 @@ const OrdersClient = () => {
                   </Button>
                   <Button
                     variant="outline"
-                    className="w-full rounded-full transition-all duration-200 hover:scale-105 cursor-pointer"
+                    className="w-full rounded-full hover-zoom-button cursor-pointer"
                     size="lg"
                     onClick={handleGoHome}
                   >

@@ -128,7 +128,7 @@ const PaymentPage = () => {
           </p>
           <Button
             onClick={() => router.push("/cart/identification")}
-            className="mt-4"
+            className="mt-4 hover-zoom-button cursor-pointer"
           >
             Voltar para endereços
           </Button>
@@ -241,7 +241,7 @@ const PaymentPage = () => {
           <Button
             variant="outline"
             onClick={() => router.push("/cart/identification")}
-            className="w-full max-w-md rounded-full transition-colors hover:border-gray-300 hover:bg-gray-50"
+            className="w-full max-w-md rounded-full hover-zoom-button cursor-pointer transition-colors hover:border-gray-300 hover:bg-gray-50"
             size="lg"
           >
             Voltar para endereços
@@ -249,7 +249,7 @@ const PaymentPage = () => {
           <Button
             onClick={handlePayment}
             disabled={isProcessing}
-            className="hover:bg-primary/90 w-full max-w-md rounded-full transition-colors"
+            className="hover:bg-primary/90 w-full max-w-md rounded-full hover-zoom-button cursor-pointer transition-colors"
             size="lg"
           >
             {isProcessing

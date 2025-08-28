@@ -154,7 +154,7 @@ export const Cart = () => {
                 </div>
 
                 <Button
-                  className="mb-15 mt-5 hover-zoom-button cursor-pointer rounded-full"
+                  className="mb-15 hover-zoom-button mt-5 cursor-pointer rounded-full"
                   asChild
                 >
                   <Link href="/cart/identification">Finalizar compra</Link>
@@ -173,10 +173,7 @@ export const Cart = () => {
                 Adicione produtos ao seu carrinho para começar a comprar
               </p>
               <div className="flex flex-col gap-2">
-                <Button
-                  asChild
-                  className="hover-zoom-button cursor-pointer"
-                >
+                <Button asChild className="hover-zoom-button cursor-pointer">
                   <Link href="/">Continuar comprando</Link>
                 </Button>
               </div>

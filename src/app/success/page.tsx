@@ -186,7 +186,7 @@ const SuccessPageContent = () => {
               {/* Botões de Ação */}
               <div className="space-y-3 pt-4 lg:space-y-4 lg:pt-6">
                 <Button
-                  className="hover:bg-primary/90 w-full rounded-full transition-colors"
+                  className="hover:bg-primary/90 w-full rounded-full hover-zoom-button cursor-pointer transition-colors"
                   size="lg"
                   onClick={handleViewOrder}
                   disabled={isProcessing}
@@ -195,7 +195,7 @@ const SuccessPageContent = () => {
                 </Button>
                 <Button
                   variant="outline"
-                  className="w-full rounded-full transition-colors hover:border-gray-300 hover:bg-gray-50"
+                  className="w-full rounded-full hover-zoom-button cursor-pointer transition-colors hover:border-gray-300 hover:bg-gray-50"
                   size="lg"
                   onClick={handleGoHome}
                   disabled={isProcessing}

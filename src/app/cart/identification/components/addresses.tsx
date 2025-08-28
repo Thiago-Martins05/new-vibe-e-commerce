@@ -384,7 +384,7 @@ const Addresses = ({ cart }: AddressesProps) => {
                               e.stopPropagation();
                               handleEditAddress(address.id);
                             }}
-                            className="h-8 w-8 p-0 transition-colors hover:bg-blue-50 hover:text-blue-600"
+                            className="h-8 w-8 p-0 hover-zoom-button cursor-pointer transition-colors hover:bg-blue-50 hover:text-blue-600"
                           >
                             <svg
                               className="h-4 w-4"
@@ -408,7 +408,7 @@ const Addresses = ({ cart }: AddressesProps) => {
                               handleDeleteAddress(address.id);
                             }}
                             disabled={isDeleting === address.id}
-                            className="text-destructive hover:bg-destructive/10 hover:text-destructive h-8 w-8 p-0 transition-colors"
+                            className="text-destructive hover:bg-destructive/10 hover:text-destructive h-8 w-8 p-0 hover-zoom-button cursor-pointer transition-colors"
                           >
                             {isDeleting === address.id ? (
                               <svg
@@ -453,7 +453,7 @@ const Addresses = ({ cart }: AddressesProps) => {
               <Button
                 variant="outline"
                 onClick={() => setShowForm(true)}
-                className="w-full py-3 transition-colors hover:border-gray-300 hover:bg-gray-50"
+                className="w-full py-3 hover-zoom-button cursor-pointer transition-colors hover:border-gray-300 hover:bg-gray-50"
               >
                 + Adicionar novo endereço
               </Button>
@@ -470,7 +470,7 @@ const Addresses = ({ cart }: AddressesProps) => {
                     variant="ghost"
                     size="sm"
                     onClick={handleCancelEdit}
-                    className="transition-colors hover:bg-gray-100"
+                    className="hover-zoom-button cursor-pointer transition-colors hover:bg-gray-100"
                   >
                     Cancelar
                   </Button>
@@ -666,7 +666,7 @@ const Addresses = ({ cart }: AddressesProps) => {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="hover:bg-primary/90 w-full transition-colors"
+                    className="hover:bg-primary/90 w-full hover-zoom-button cursor-pointer transition-colors"
                   >
                     {isSubmitting
                       ? editingAddressId
@@ -753,7 +753,7 @@ const Addresses = ({ cart }: AddressesProps) => {
 
             {/* Botão Continuar */}
             <Button
-              className="hover:bg-primary/90 w-full transition-colors"
+              className="hover:bg-primary/90 w-full hover-zoom-button cursor-pointer transition-colors"
               size="lg"
               onClick={handleContinue}
               disabled={!selectedAddressId}
