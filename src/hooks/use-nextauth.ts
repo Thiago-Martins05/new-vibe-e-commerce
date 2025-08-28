@@ -28,6 +28,12 @@ export const useNextAuth = () => {
         return { success: false, error: "Popup bloqueado pelo navegador" };
       }
 
+      // Verificar se a variável de ambiente está configurada
+      if (!process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID) {
+        console.error("❌ NEXT_PUBLIC_GOOGLE_CLIENT_ID não está configurada");
+        return { success: false, error: "Configuração do Google OAuth não encontrada" };
+      }
+
       // Aguardar resposta do popup
       return new Promise((resolve) => {
         let isResolved = false;
