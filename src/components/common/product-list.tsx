@@ -64,7 +64,7 @@ const ProductList = ({ title, products }: ProductListProps) => {
         <Button
           variant="outline"
           size="icon"
-          className="absolute left-2 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-white/80 shadow-lg backdrop-blur-sm hover:bg-white md:flex md:cursor-pointer"
+          className="absolute left-2 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-white/80 shadow-lg backdrop-blur-sm hover:bg-white hover:scale-105 transition-all duration-200 cursor-pointer md:flex"
           onClick={() => scrollTo("left")}
           disabled={!canScrollLeft}
         >
@@ -86,7 +86,7 @@ const ProductList = ({ title, products }: ProductListProps) => {
         <Button
           variant="outline"
           size="icon"
-          className="absolute right-2 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-white/80 shadow-lg backdrop-blur-sm hover:bg-white md:flex md:cursor-pointer"
+          className="absolute right-2 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-white/80 shadow-lg backdrop-blur-sm hover:bg-white hover:scale-105 transition-all duration-200 cursor-pointer md:flex"
           onClick={() => scrollTo("right")}
           disabled={!canScrollRight}
         >
