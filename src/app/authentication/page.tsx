@@ -14,9 +14,9 @@ const Authentication = async () => {
       <Header />
       <div className="m-auto flex w-full flex-col gap-6 p-5 md:m-auto md:w-[80%]">
         <Tabs defaultValue="sign-in">
-          <TabsList>
-            <TabsTrigger value="sign-in">Entrar</TabsTrigger>
-            <TabsTrigger value="sign-up">Criar Conta</TabsTrigger>
+          <TabsList className="transition-all duration-200">
+            <TabsTrigger value="sign-in" className="transition-all duration-200 hover:scale-105 cursor-pointer">Entrar</TabsTrigger>
+            <TabsTrigger value="sign-up" className="transition-all duration-200 hover:scale-105 cursor-pointer">Criar Conta</TabsTrigger>
           </TabsList>
           <TabsContent value="sign-in">
             <SignInForm />
