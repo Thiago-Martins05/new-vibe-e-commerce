@@ -2,10 +2,18 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
   try {
+    console.log("🔄 API Exchange - Iniciando...");
+    
     const body = await request.json();
     const { code } = body;
 
+    console.log("🔑 Código recebido:", code ? "Sim" : "Não");
+    console.log("🔧 GOOGLE_CLIENT_ID:", process.env.GOOGLE_CLIENT_ID ? "Configurado" : "Não configurado");
+    console.log("🔧 GOOGLE_CLIENT_SECRET:", process.env.GOOGLE_CLIENT_SECRET ? "Configurado" : "Não configurado");
+    console.log("🔧 NEXTAUTH_URL:", process.env.NEXTAUTH_URL);
+
     if (!code) {
+      console.log("❌ Código não fornecido");
       return NextResponse.json(
         { message: "Código de autorização é obrigatório" },
         { status: 400 },
@@ -13,6 +21,11 @@ export async function POST(request: NextRequest) {
     }
 
     // Trocar o código por um token de acesso
+    console.log("🔄 Fazendo requisição para Google OAuth...");
+    
+    const redirectUri = `${process.env.NEXTAUTH_URL || process.env.VERCEL_URL || "http://localhost:3000"}/auth/google/callback`;
+    console.log("🔗 Redirect URI:", redirectUri);
+    
     const tokenResponse = await fetch("https://oauth2.googleapis.com/token", {
       method: "POST",
       headers: {
@@ -23,14 +36,15 @@ export async function POST(request: NextRequest) {
         client_secret: process.env.GOOGLE_CLIENT_SECRET!,
         code,
         grant_type: "authorization_code",
-        redirect_uri: `${process.env.NEXTAUTH_URL}/auth/google/callback`,
+        redirect_uri: redirectUri,
       }),
     });
 
     const tokenData = await tokenResponse.json();
+    console.log("🔄 Resposta do Google:", tokenData);
 
     if (!tokenResponse.ok) {
-      console.error("Erro ao trocar código por token:", tokenData);
+      console.error("❌ Erro ao trocar código por token:", tokenData);
       return NextResponse.json(
         { message: "Erro ao autenticar com Google" },
         { status: 400 },
