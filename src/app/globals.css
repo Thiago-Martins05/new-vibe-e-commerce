@@ -176,7 +176,6 @@
 
 .hover-zoom:hover {
   transform: scale(1.1);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .hover-zoom-button {
@@ -195,7 +194,6 @@
 
 .hover-zoom-product:hover {
   transform: scale(1.08);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 @keyframes scroll {
