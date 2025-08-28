@@ -19,7 +19,7 @@ const ProductItem = ({ product, textContainerClassName }: ProductItemProps) => {
   return (
     <Link
       href={`/product-variant/${firstVariant.slug}`}
-      className="flex flex-col gap-4 px-2 pb-3 transform transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-lg cursor-pointer md:m-auto md:w-[80%] md:gap-2"
+      className="flex flex-col gap-4 px-2 pb-3 hover-zoom-product cursor-pointer md:m-auto md:w-[80%] md:gap-2"
     >
       <Image
         src={firstVariant.imageUrl}

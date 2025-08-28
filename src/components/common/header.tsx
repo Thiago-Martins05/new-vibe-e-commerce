@@ -53,7 +53,7 @@ const HeaderContent = () => {
 
   return (
     <header className="flex items-center justify-between px-5 py-1 md:m-auto md:max-w-[80%]">
-              <Link href="/" className="transform transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer">
+              <Link href="/" className="hover-zoom-button cursor-pointer">
         <Image src="/logo.svg" alt="NEWVIBE" width={100} height={26}></Image>
       </Link>
 
@@ -66,7 +66,7 @@ const HeaderContent = () => {
         <Cart />
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant="outline" size="icon" className="transform transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer">
+            <Button variant="outline" size="icon" className="hover-zoom-button cursor-pointer">
               <MenuIcon />
             </Button>
           </SheetTrigger>
@@ -103,11 +103,11 @@ const HeaderContent = () => {
 
                   <div className="mb-5 mt-6">
                     <div className="flex w-full flex-col space-y-6">
-                      <Link href="/" className="flex w-full gap-3 transition-all duration-200 hover:scale-105 hover:text-primary cursor-pointer">
+                      <Link href="/" className="flex w-full gap-3 hover-zoom-button hover:text-primary cursor-pointer">
                         <HomeIcon />
                         Início
                       </Link>
-                      <Link href="/orders" className="flex w-full gap-3 transition-all duration-200 hover:scale-105 hover:text-primary cursor-pointer">
+                      <Link href="/orders" className="flex w-full gap-3 hover-zoom-button hover:text-primary cursor-pointer">
                         <TruckIcon />
                         Meus Pedidos
                       </Link>
@@ -125,7 +125,7 @@ const HeaderContent = () => {
                     <Button
                       variant="outline"
                       size="icon"
-                      className="transition-all duration-200 hover:scale-105 cursor-pointer"
+                      className="hover-zoom-button cursor-pointer"
                       onClick={() => {
                         try {
                           logout();
@@ -141,7 +141,7 @@ const HeaderContent = () => {
               ) : (
                 <div className="flex items-center justify-between">
                   <h2 className="font-semibold">Olá. Faça seu login!</h2>
-                  <Button size="icon" asChild variant="outline" className="transition-all duration-200 hover:scale-105 cursor-pointer">
+                  <Button size="icon" asChild variant="outline" className="hover-zoom-button cursor-pointer">
                     <Link href="/login">
                       <LogInIcon />
                     </Link>

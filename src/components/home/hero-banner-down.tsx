@@ -19,7 +19,7 @@ const HeroBannerDown = () => {
           width={0}
           height={0}
           sizes="80vw"
-          className="w-full transform transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-lg cursor-pointer md:hidden"
+          className="w-full hover-zoom cursor-pointer md:hidden"
           onClick={handleNavigateToJackets}
         />
       </div>
@@ -29,7 +29,7 @@ const HeroBannerDown = () => {
         width={0}
         height={0}
         sizes="80vw"
-        className="hidden rounded-3xl transform transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-lg cursor-pointer md:m-auto md:block md:w-[78%]"
+        className="hidden rounded-3xl hover-zoom cursor-pointer md:m-auto md:block md:w-[78%]"
         onClick={handleNavigateToJackets}
       />
     </div>
