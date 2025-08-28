@@ -104,7 +104,7 @@ const SearchBar = () => {
               type="button"
               variant="ghost"
               size="icon"
-              className="absolute right-1 top-1/2 h-6 w-6 -translate-y-1/2"
+              className="absolute right-1 top-1/2 h-6 w-6 -translate-y-1/2 transition-all duration-200 hover:scale-110 cursor-pointer"
               onClick={clearSearch}
             >
               <X className="h-3 w-3" />
@@ -146,7 +146,7 @@ const SearchBar = () => {
                       key={productData.id}
                       href={`/product-variant/${firstVariant.slug}`}
                       onClick={handleProductClick}
-                      className="hover:bg-muted flex items-center gap-3 rounded-md p-2 transition-colors"
+                      className="hover:bg-muted flex items-center gap-3 rounded-md p-2 transition-all duration-200 hover:scale-105 cursor-pointer"
                     >
                       <Image
                         src={firstVariant.imageUrl}

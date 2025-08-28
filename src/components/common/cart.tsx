@@ -54,7 +54,7 @@ export const Cart = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button variant="outline" size="icon" className="transition-all duration-200 hover:scale-105 cursor-pointer">
           <ShoppingBagIcon />
         </Button>
       </SheetTrigger>
@@ -149,7 +149,7 @@ export const Cart = () => {
                   <p>{formatCentsToBRL(cart?.totalPriceInCents ?? 0)}</p>
                 </div>
 
-                <Button className="mb-15 mt-5 rounded-full" asChild>
+                <Button className="mb-15 mt-5 rounded-full transition-all duration-200 hover:scale-105 cursor-pointer" asChild>
                   <Link href="/cart/identification">Finalizar compra</Link>
                 </Button>
               </div>
@@ -166,7 +166,7 @@ export const Cart = () => {
                 Adicione produtos ao seu carrinho para começar a comprar
               </p>
               <div className="flex flex-col gap-2">
-                <Button asChild>
+                <Button asChild className="transition-all duration-200 hover:scale-105 cursor-pointer">
                   <Link href="/">Continuar comprando</Link>
                 </Button>
               </div>
