@@ -9,6 +9,13 @@ const logos = [
   { src: "/converse-logo.png", alt: "Converse" },
   { src: "/polo-logo.png", alt: "Polo" },
   { src: "/zara-logo.png", alt: "Zara" },
+  { src: "/adidas-logo.png", alt: "Adidas" },
+  { src: "/nike-logo.png", alt: "Nike" },
+  { src: "/puma-logo.png", alt: "Puma" },
+  { src: "/newbalance-logo.png", alt: "New Balance" },
+  { src: "/converse-logo.png", alt: "Converse" },
+  { src: "/polo-logo.png", alt: "Polo" },
+  { src: "/zara-logo.png", alt: "Zara" },
 ];
 
 const PartnerBrands = ({ title }: { title: string }) => {
