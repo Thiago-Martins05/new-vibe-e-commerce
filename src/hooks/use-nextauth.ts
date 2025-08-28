@@ -7,19 +7,28 @@ export const useNextAuth = () => {
 
   const signInWithGoogle = async () => {
     try {
+      console.log("🔍 Iniciando login com Google...");
+      console.log("📍 Origin:", window.location.origin);
+      console.log("🔑 Client ID:", process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID ? "Configurado" : "Não configurado");
+      
       // Abrir popup do Google OAuth
       const width = 500;
       const height = 600;
       const left = window.screenX + (window.outerWidth - width) / 2;
       const top = window.screenY + (window.outerHeight - height) / 2;
 
+      const redirectUri = window.location.origin + "/auth/google/callback";
+      const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?` +
+        `client_id=${process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}&` +
+        `redirect_uri=${encodeURIComponent(redirectUri)}&` +
+        `response_type=code&` +
+        `scope=openid email profile&` +
+        `access_type=offline`;
+
+      console.log("🔗 URL de autenticação:", authUrl);
+
       const popup = window.open(
-        `https://accounts.google.com/o/oauth2/v2/auth?` +
-          `client_id=${process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}&` +
-          `redirect_uri=${encodeURIComponent(window.location.origin + "/auth/google/callback")}&` +
-          `response_type=code&` +
-          `scope=openid email profile&` +
-          `access_type=offline`,
+        authUrl,
         "google-login",
         `width=${width},height=${height},left=${left},top=${top}`,
       );
@@ -53,9 +62,17 @@ export const useNextAuth = () => {
 
         // Listener para mensagem do popup
         const messageListener = (event: MessageEvent) => {
-          if (event.origin !== window.location.origin) return;
+          console.log("📨 Mensagem recebida:", event.data);
+          console.log("🌍 Origin da mensagem:", event.origin);
+          console.log("🏠 Origin atual:", window.location.origin);
+          
+          if (event.origin !== window.location.origin) {
+            console.log("❌ Origin não corresponde, ignorando mensagem");
+            return;
+          }
 
           if (event.data.type === "GOOGLE_LOGIN_SUCCESS" && !isResolved) {
+            console.log("✅ Login com Google bem-sucedido");
             isResolved = true;
             clearInterval(checkClosed);
             window.removeEventListener("message", messageListener);
@@ -63,13 +80,14 @@ export const useNextAuth = () => {
             try {
               popup.close();
             } catch (error) {
-              // Ignorar erros de Cross-Origin
+              console.log("⚠️ Erro ao fechar popup (normal):", error);
             }
 
             // Fazer login com os dados do Google
             handleGoogleLogin(event.data.user);
             resolve({ success: true });
           } else if (event.data.type === "GOOGLE_LOGIN_ERROR" && !isResolved) {
+            console.log("❌ Erro no login com Google:", event.data.error);
             isResolved = true;
             clearInterval(checkClosed);
             window.removeEventListener("message", messageListener);
@@ -77,7 +95,7 @@ export const useNextAuth = () => {
             try {
               popup.close();
             } catch (error) {
-              // Ignorar erros de Cross-Origin
+              console.log("⚠️ Erro ao fechar popup (normal):", error);
             }
 
             resolve({ success: false, error: event.data.error });
