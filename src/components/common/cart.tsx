@@ -57,7 +57,7 @@ export const Cart = () => {
         <Button
           variant="outline"
           size="icon"
-          className="cursor-pointer transition-all duration-300 ease-in-out hover:scale-125"
+          className="cursor-pointer transform transition-all duration-300 ease-in-out hover:scale-110"
         >
           <ShoppingBagIcon />
         </Button>
@@ -154,7 +154,7 @@ export const Cart = () => {
                 </div>
 
                 <Button
-                  className="mb-15 mt-5 cursor-pointer rounded-full transition-all duration-300 ease-in-out hover:scale-125"
+                  className="mb-15 mt-5 cursor-pointer rounded-full transform transition-all duration-300 ease-in-out hover:scale-110"
                   asChild
                 >
                   <Link href="/cart/identification">Finalizar compra</Link>
@@ -175,7 +175,7 @@ export const Cart = () => {
               <div className="flex flex-col gap-2">
                 <Button
                   asChild
-                  className="cursor-pointer transition-all duration-300 ease-in-out hover:scale-125"
+                  className="cursor-pointer transform transition-all duration-300 ease-in-out hover:scale-110"
                 >
                   <Link href="/">Continuar comprando</Link>
                 </Button>
