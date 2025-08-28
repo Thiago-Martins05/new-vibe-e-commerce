@@ -19,7 +19,7 @@ const HeroBannerUp = () => {
           width={0}
           height={0}
           sizes="80vw"
-          className="w-full transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer md:hidden"
+          className="w-full transition-all duration-200 hover:scale-110 hover:shadow-lg cursor-pointer md:hidden"
           onClick={handleNavigateToJackets}
         />
 
@@ -29,7 +29,7 @@ const HeroBannerUp = () => {
           width={0}
           height={0}
           sizes="80vw"
-          className="hidden transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer md:m-auto md:block md:w-[80%]"
+          className="hidden transition-all duration-200 hover:scale-110 hover:shadow-lg cursor-pointer md:m-auto md:block md:w-[80%]"
           onClick={handleNavigateToJackets}
         />
       </div>
