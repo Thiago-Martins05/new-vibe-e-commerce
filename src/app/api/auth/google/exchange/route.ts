@@ -23,7 +23,8 @@ export async function POST(request: NextRequest) {
     // Trocar o código por um token de acesso
     console.log("🔄 Fazendo requisição para Google OAuth...");
     
-    const redirectUri = `${process.env.NEXTAUTH_URL || process.env.VERCEL_URL || "http://localhost:3000"}/auth/google/callback`;
+    const baseUrl = process.env.NEXTAUTH_URL || process.env.VERCEL_URL || "http://localhost:3000";
+    const redirectUri = `${baseUrl.replace(/\/$/, '')}/auth/google/callback`;
     console.log("🔗 Redirect URI:", redirectUri);
     
     const tokenResponse = await fetch("https://oauth2.googleapis.com/token", {

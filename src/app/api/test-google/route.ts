@@ -8,7 +8,7 @@ export async function GET() {
     hasVercelUrl: !!process.env.VERCEL_URL,
     nextAuthUrl: process.env.NEXTAUTH_URL,
     vercelUrl: process.env.VERCEL_URL,
-    redirectUri: `${process.env.NEXTAUTH_URL || process.env.VERCEL_URL || "http://localhost:3000"}/auth/google/callback`,
+    redirectUri: `${(process.env.NEXTAUTH_URL || process.env.VERCEL_URL || "http://localhost:3000").replace(/\/$/, '')}/auth/google/callback`,
     environment: process.env.NODE_ENV,
   });
 }

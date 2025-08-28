@@ -17,7 +17,7 @@ export const useNextAuth = () => {
       const left = window.screenX + (window.outerWidth - width) / 2;
       const top = window.screenY + (window.outerHeight - height) / 2;
 
-      const redirectUri = window.location.origin + "/auth/google/callback";
+      const redirectUri = window.location.origin.replace(/\/$/, '') + "/auth/google/callback";
       const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?` +
         `client_id=${process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}&` +
         `redirect_uri=${encodeURIComponent(redirectUri)}&` +
