@@ -132,12 +132,12 @@ const SignInForm = () => {
             </CardContent>
 
             <CardFooter className="flex flex-col gap-2">
-              <Button type="submit" className="w-full">
+              <Button type="submit" className="w-full transition-all duration-200 hover:scale-105 cursor-pointer">
                 Entrar
               </Button>
               <Button
                 type="button"
-                className="w-full"
+                className="w-full transition-all duration-200 hover:scale-105 cursor-pointer"
                 variant="outline"
                 onClick={handleSignInWithGoogle}
               >

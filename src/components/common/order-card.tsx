@@ -47,7 +47,7 @@ const OrderCard = ({
       <CardHeader className="pb-3">
         <Button
           variant="ghost"
-          className="h-auto w-full justify-between p-0"
+          className="h-auto w-full justify-between p-0 transition-all duration-200 hover:scale-105 cursor-pointer"
           onClick={toggleExpanded}
         >
           <span className="text-lg font-medium">

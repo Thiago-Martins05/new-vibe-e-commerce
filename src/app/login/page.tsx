@@ -235,7 +235,7 @@ export default function LoginPage() {
                       </FormItem>
                     )}
                   />
-                  <Button type="submit" className="w-full" disabled={isLoading}>
+                  <Button type="submit" className="w-full transition-all duration-200 hover:scale-105 cursor-pointer" disabled={isLoading}>
                     {isLoading ? "Entrando..." : "Entrar"}
                   </Button>
 
@@ -253,7 +253,7 @@ export default function LoginPage() {
                   <Button
                     type="button"
                     variant="outline"
-                    className="w-full"
+                    className="w-full transition-all duration-200 hover:scale-105 cursor-pointer"
                     disabled={isLoading}
                     onClick={handleGoogleSignIn}
                   >
@@ -368,7 +368,7 @@ export default function LoginPage() {
 
                     <Button
                       type="submit"
-                      className="w-full"
+                      className="w-full transition-all duration-200 hover:scale-105 cursor-pointer"
                       disabled={isLoading}
                     >
                       {isLoading ? "Criando conta..." : "Criar Conta"}
@@ -388,7 +388,7 @@ export default function LoginPage() {
                     <Button
                       type="button"
                       variant="outline"
-                      className="w-full"
+                      className="w-full transition-all duration-200 hover:scale-105 cursor-pointer"
                       disabled={isLoading}
                       onClick={handleGoogleSignIn}
                     >
@@ -426,7 +426,7 @@ export default function LoginPage() {
               <Button
                 type="button"
                 variant="link"
-                className="p-0 text-sm"
+                className="p-0 text-sm transition-all duration-200 hover:scale-105 cursor-pointer"
                 onClick={toggleMode}
               >
                 {isLogin ? "Criar conta" : "Fazer login"}
