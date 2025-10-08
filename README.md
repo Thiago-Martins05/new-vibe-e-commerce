@@ -355,9 +355,9 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 Se você encontrar algum problema ou tiver dúvidas:
 
 1. Verifique a [documentação](https://docs.newvibe.com)
-2. Abra uma [issue](https://github.com/seu-usuario/newvibe/issues)
-3. Entre em contato: suporte@newvibe.com
+2. Abra uma [issue]((https://github.com/Thiago-Martins05/new-vibe-e-commerce))
+3. Entre em contato: thiagoroyal05@icloud.com
 
 ---
 
-**Desenvolvido com ❤️ usando Next.js, React e TypeScript**
+**Desenvolvido usando Next.js, React e TypeScript**
